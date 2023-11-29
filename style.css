@@ -5,7 +5,6 @@
 }
 body {
   background-color: white;
-
 }
 
 .container {
@@ -51,3 +50,48 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  letter-spacing: 0.64px;
+  font-family: "Roboto", sans-serif;
+  padding: 16px 32px;
+  border-radius: 4px;
+
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 500%;
+  background: linear-gradient(#ff9500, #f90000);
+  animation: rotate 4s linear infinite;
+}
+
+.hero-button::after {
+  content: "";
+  position: absolute;
+  background: #4d5ae5;
+  inset: 3px;
+  border-radius: 10px;
+}
+
+.btn-text-rotate {
+  z-index: 2;
+}
+/* ======================================================= rotate border button =====================*/
